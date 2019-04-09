@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { SideNavBar } from './components/sideNavBar';
+import { MainNav } from './components/mainNav';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div id="wrapper">
+          <SideNavBar />
+          <div id="page-content-wrapper">
+            <MainNav />
+            <div className="jumbotron text-dark">
+              <p className="lead">Here is a website that will allow you to measure your ability in the game supersmashbros for WiiU</p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
