@@ -1,45 +1,45 @@
-import React, { Component } from 'react';
-import $ from 'jquery';
+import React, { Component } from "react";
+import $ from "jquery";
+import {
+    NavLink,
+  } from "react-router-dom";
 
 export class SideNavBar extends Component {
-
   componentDidMount() {
     $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
     });
-  };
-    
+  }
+
   render() {
     return (
-    <div id="sidebar-wrapper">
+      <div id="sidebar-wrapper">
         <ul className="sidebar-nav">
-            <li className="sidebar-brand">
-                <a href="/">
-                    smashnot.es
-                </a>
-            </li>
-            <li>
-                <a href="/">Practice Session</a>
-            </li>
-            
-            <li>
-                <a href="/">Lab</a>
-            </li>
-            
-            <li>
-                <a href="/">Matchups</a>
-            </li>
-            
-            <li>
-                <a href="/">Quick Notes</a>
-            </li>
+          <li className="sidebar-brand">
+            <NavLink exact to="/">SmashNot.es</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Practice">Practice Session</NavLink>
+          </li>
 
-            <li>
-                <a href="/">Tourney Mode</a>
-            </li>
+          <li>
+            <NavLink to="/Lab">Lab</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/Matchups">Matchups</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/Notes">Quick Notes</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/Tourney">Tourney Mode</NavLink>
+          </li>
         </ul>
-    </div>
-        );
-    }
+      </div>
+    );
+  }
 }
