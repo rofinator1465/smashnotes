@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## SmashNot.es
 ### Site Goal
 
@@ -27,7 +25,7 @@ Refactor Jquery navDrawer into react powered drawer (class change via onClick?)
 Refactor Jquery modal to allow react to close on data send. (Save/close button)
 
 ### General Challenges
-Managing and Storing Data
+Managing and Storing Data<br>
 
 Best way to include outside API such as kurogane hammer API for site speed
 
@@ -55,61 +53,63 @@ Firebase
 
 
 ### Features To Be Added
-Home Page
-Recent activity on account
-Quick search matchup
-Access to quicknotes
+Home Page<br>
+Recent activity on account<br>
+Quick search matchup<br>
+Access to quicknotes<br>
 
 ### Practice Sessions
-Session Timer
-Include practice log and notes for individual sessions
-Add training goals (able to select Successful/Failed/Skipped)
-Training Goal Timers
-Add inputs for current goal
+Session Timer<br>
+Include practice log and notes for individual sessions<br>
+Add training goals (able to select Successful/Failed/Skipped)<br>
+Training Goal Timers<br>
+Add inputs for current goal<br>
 
 ### Labbing
-Add lab goals + notes per individual goals
-View lab goals and add notes (dated)
+Add lab goals + notes per individual goals<br>
+View lab goals and add notes (dated)<br>
 
 ### Quick Notes
-Always editable quick notes
-Easily searchable and accessible
-Include tags for each quick note
-Find quicknotes ordered by recent on each section based on tags
+Always editable quick notes<br>
+Easily searchable and accessible<br>
+Include tags for each quick note<br>
+Find quicknotes ordered by recent on each section based on tags<br>
 
 
 ### Matchups
-Character vs Character
-Select keys
-Keys
-Play Grounded
-Cat and Mouse
-Play Aerial
-Suffocate
-Edge Guard
-Stage Control
-Zone
-Camp
-Trade
-Zone Break
-Matchup Notes
-Quickest Moves List
-Quicked OOS List
-Has Command Grab
-Number of jumps
-Favorite Stages
+Character vs Character<br>
+Select keys<br>
+Keys<br>
+Play Grounded<br>
+Cat and Mouse<br>
+Play Aerial<br>
+Suffocate<br>
+Edge Guard<br>
+Stage Control<br>
+Zone<br>
+Camp<br>
+Trade<br>
+Zone Break<br>
+Matchup Notes<br>
+Quickest Moves List<br>
+Quicked OOS List<br>
+Has Command Grab<br>
+Number of jumps<br>
+Favorite Stages<br>
 
 ### Tourney Mode
-Virtual Coach
-Show important info for matchup
-Show Quick-list of Important Frame Data
-Show Best and Worst Stages for matchup
-Log Matches
-Tourney + Date
-Set Log
-Between Set Stage Striking
-Striking
+Virtual Coach<br>
+Show important info for matchup<br>
+Show Quick-list of Important Frame Data<br>
+Show Best and Worst Stages for matchup<br>
+Log Matches<br>
+Tourney + Date<br>
+Set Log<br>
+Between Set Stage Striking<br>
+Striking<br>
 
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
