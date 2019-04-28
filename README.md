@@ -1,11 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
 ## SmashNot.es
-Smashnot.es
-Site Goal
+###Site Goal
 
 Create a way for Beginner and Veteran players alike to keep detailed information on the many possible matchups. 
 
@@ -13,7 +9,7 @@ Create an easy way to view and process relevant information while creating match
 
 Track tournament play as well as practice to facilitate improvement in players. 
 
-Features
+###Features
 
 Allow for customization of matchup notes so that they may be most useful for the majority of players (custom matchup notes display). 
 
@@ -23,14 +19,14 @@ Allow for logging of practice amount as well as practice regime. (Including chec
 
 Allow for logging of tournament data as well as quick access to notes between games or after sets. 
 
-Challenges
+###Challenges
 
-Active Challenges
+###Active Challenges
 Refactor Jquery navDrawer into react powered drawer (class change via onClick?)
 
 Refactor Jquery modal to allow react to close on data send. (Save/close button)
 
-General Challenges
+###General Challenges
 Managing and Storing Data
 
 Best way to include outside API such as kurogane hammer API for site speed
@@ -42,7 +38,7 @@ Keep Website Light and Quick
 Allow for easy transfer to native app via React Native
 
 
-Technologies To Use
+###Technologies To Use
 React.js
 
 Redux??
@@ -58,31 +54,31 @@ Javascript
 Firebase
 
 
-Features To Be Added
+###Features To Be Added
 Home Page
 Recent activity on account
 Quick search matchup
 Access to quicknotes
 
-Practice Sessions
+###Practice Sessions
 Session Timer
 Include practice log and notes for individual sessions
 Add training goals (able to select Successful/Failed/Skipped)
 Training Goal Timers
 Add inputs for current goal
 
-Labbing
+###Labbing
 Add lab goals + notes per individual goals
 View lab goals and add notes (dated)
 
-Quick Notes
+###Quick Notes
 Always editable quick notes
 Easily searchable and accessible
 Include tags for each quick note
 Find quicknotes ordered by recent on each section based on tags
 
 
-Matchups
+###Matchups
 Character vs Character
 Select keys
 Keys
@@ -96,7 +92,6 @@ Zone
 Camp
 Trade
 Zone Break
-…
 Matchup Notes
 Quickest Moves List
 Quicked OOS List
@@ -104,7 +99,7 @@ Has Command Grab
 Number of jumps
 Favorite Stages
 
-Tourney Mode
+### Tourney Mode
 Virtual Coach
 Show important info for matchup
 Show Quick-list of Important Frame Data
