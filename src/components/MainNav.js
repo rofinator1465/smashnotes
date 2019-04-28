@@ -9,7 +9,7 @@ export class MainNav extends Component {
           href="#menu-toggle"
           id="menu-toggle"
         >
-          <span className="navbar-toggler-icon" />Menu
+          <span className="navbar-toggler-icon" />
         </a>
         <a className="navbar-brand mr-auto" href="/">
           <img src={require("../logotransparent.svg")} height="40" />
