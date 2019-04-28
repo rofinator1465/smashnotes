@@ -37,6 +37,120 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## SmashNot.es
+Smashnot.es
+Site Goal
+
+Create a way for Beginner and Veteran players alike to keep detailed information on the many possible matchups. 
+
+Create an easy way to view and process relevant information while creating matchup information. 
+
+Track tournament play as well as practice to facilitate improvement in players. 
+
+Features
+
+Allow for customization of matchup notes so that they may be most useful for the majority of players (custom matchup notes display). 
+
+Allow ability to write player specific notes. (via list at bottom of character matchup sections, something to this effect)
+
+Allow for logging of practice amount as well as practice regime. (Including checklist for completing practice)
+
+Allow for logging of tournament data as well as quick access to notes between games or after sets. 
+
+Challenges
+
+Active Challenges
+Refactor Jquery navDrawer into react powered drawer (class change via onClick?)
+
+Refactor Jquery modal to allow react to close on data send. (Save/close button)
+
+General Challenges
+Managing and Storing Data
+
+Best way to include outside API such as kurogane hammer API for site speed
+
+How to create effective offline mode
+
+Keep Website Light and Quick
+
+Allow for easy transfer to native app via React Native
+
+
+Technologies To Use
+React.js
+
+Redux??
+
+SASS??
+
+Express
+
+Bootstrap - Material UI
+
+Javascript
+
+Firebase
+
+
+Features To Be Added
+Home Page
+Recent activity on account
+Quick search matchup
+Access to quicknotes
+
+Practice Sessions
+Session Timer
+Include practice log and notes for individual sessions
+Add training goals (able to select Successful/Failed/Skipped)
+Training Goal Timers
+Add inputs for current goal
+
+Labbing
+Add lab goals + notes per individual goals
+View lab goals and add notes (dated)
+
+Quick Notes
+Always editable quick notes
+Easily searchable and accessible
+Include tags for each quick note
+Find quicknotes ordered by recent on each section based on tags
+
+
+Matchups
+Character vs Character
+Select keys
+Keys
+Play Grounded
+Cat and Mouse
+Play Aerial
+Suffocate
+Edge Guard
+Stage Control
+Zone
+Camp
+Trade
+Zone Break
+…
+Matchup Notes
+Quickest Moves List
+Quicked OOS List
+Has Command Grab
+Number of jumps
+Favorite Stages
+
+Tourney Mode
+Virtual Coach
+Show important info for matchup
+Show Quick-list of Important Frame Data
+Show Best and Worst Stages for matchup
+Log Matches
+Tourney + Date
+Set Log
+Between Set Stage Striking
+Striking
+
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
