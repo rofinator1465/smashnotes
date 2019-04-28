@@ -18,25 +18,31 @@ class App extends Component {
     super(props);
     this.toggleClass = this.toggleClass.bind(this);
     this.state = {
-      toggled: false,
-    }
+      toggled: false
+    };
   }
 
   toggleClass() {
-    this.setState((prevState) => {
-      return { toggled: !prevState.toggled }
-    });
+    const currentState = this.state.toggled;
+    this.setState({ toggled: !currentState });
   }
 
   render() {
     return (
       <div className="App">
         <BrowserRouter>
-          <div id="wrapper">
+          <div id="wrapper" className={this.state.toggled ? 'toggled': null}>
             <NavDrawer />
             <div id="page-content-wrapper">
-              <MainNav />
-              <div class="modal fade" id="quickNotes" tabindex="-1" role="dialog" aria-labelledby="quickNotes" aria-hidden="true">
+              <MainNav toggleClass={this.toggleClass} />
+              <div
+                class="modal fade"
+                id="quickNotes"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="quickNotes"
+                aria-hidden="true"
+              >
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <Notes />
                 </div>

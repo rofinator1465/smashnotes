@@ -8,6 +8,7 @@ export class MainNav extends Component {
           className="btn btn-default navbar-toggler"
           href="#menu-toggle"
           id="menu-toggle"
+          onClick={this.props.toggleClass}
         >
           <span className="navbar-toggler-icon" />
         </a>
