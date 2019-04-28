@@ -53,7 +53,7 @@ Firebase
 
 
 ### Features To Be Added
-Home Page<br>
+## Home Page
 Recent activity on account<br>
 Quick search matchup<br>
 Access to quicknotes<br>
