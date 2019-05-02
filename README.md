@@ -20,12 +20,14 @@ Allow for logging of tournament data as well as quick access to notes between ga
 ### Challenges
 
 ### Active Challenges
-Refactor Jquery navDrawer into react powered drawer (class change via onClick?)
 
-Refactor Jquery modal to allow react to close on data send. (Save/close button)
+#### QuickNotes
+Add tag pill functionality to QuickNotes.
+Connect to Firebase and accept data.
+
 
 ### General Challenges
-Managing and Storing Data<br>
+Managing and Storing Data
 
 Best way to include outside API such as kurogane hammer API for site speed
 
@@ -53,7 +55,7 @@ Firebase
 
 
 ### Features To Be Added
-## Home Page
+### Home Page
 Recent activity on account<br>
 Quick search matchup<br>
 Access to quicknotes<br>
@@ -80,16 +82,16 @@ Find quicknotes ordered by recent on each section based on tags<br>
 Character vs Character<br>
 Select keys<br>
 Keys<br>
-Play Grounded<br>
-Cat and Mouse<br>
-Play Aerial<br>
-Suffocate<br>
-Edge Guard<br>
-Stage Control<br>
-Zone<br>
-Camp<br>
-Trade<br>
-Zone Break<br>
+- Play Grounded<br>
+- Cat and Mouse<br>
+- Play Aerial<br>
+- Suffocate<br>
+- Edge Guard<br>
+- Stage Control<br>
+- Zone<br>
+- Camp<br>
+- Trade<br>
+- Zone Break<br>
 Matchup Notes<br>
 Quickest Moves List<br>
 Quicked OOS List<br>

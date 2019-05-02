@@ -10,7 +10,7 @@ import { Recent } from "./components/Recent";
 import { Practice } from "./components/Practice";
 import { Lab } from "./components/Lab";
 import { Matchups } from "./components/Matchups";
-import { Notes } from "./components/Notes";
+import { QuickNotes } from "./components/QuickNotes";
 import { Tourney } from "./components/Tourney";
 
 class App extends Component {
@@ -31,11 +31,11 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <div id="wrapper" className={this.state.toggled ? 'toggled': null}>
+          <div id="wrapper" className={this.state.toggled ? "toggled" : null}>
             <NavDrawer />
             <div id="page-content-wrapper">
               <MainNav toggleClass={this.toggleClass} />
-              <div
+              <section
                 class="modal fade"
                 id="quickNotes"
                 tabindex="-1"
@@ -44,16 +44,16 @@ class App extends Component {
                 aria-hidden="true"
               >
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                  <Notes />
+                  <QuickNotes />
                 </div>
-              </div>
-              <div className="container p-3">
+              </section>
+              <main className="container p-3">
                 <Route exact path="/" component={Recent} />
                 <Route path="/Practice" component={Practice} />
                 <Route path="/Lab" component={Lab} />
                 <Route path="/Matchups" component={Matchups} />
                 <Route path="/Tourney" component={Tourney} />
-              </div>
+              </main>
             </div>
           </div>
         </BrowserRouter>

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export class NavDrawer extends Component {
   render() {
     return (
-      <div id="navDrawer-wrapper">
+      <nav id="navDrawer-wrapper">
         <ul className="navDrawer">
           <li className="navDrawer-brand">
             <NavLink exact to="/">
@@ -35,7 +35,7 @@ export class NavDrawer extends Component {
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
     );
   }
 }

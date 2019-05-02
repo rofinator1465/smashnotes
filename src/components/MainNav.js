@@ -12,10 +12,10 @@ export class MainNav extends Component {
         >
           <span className="navbar-toggler-icon" />
         </a>
-        <a className="navbar-brand mr-auto" href="/">
-          <img src={require("../logotransparent.svg")} height="40" />
+        <span className="navbar-brand mr-auto" href="">
+          <img src={require("../logotransparent.svg")} alt="Smashnotes logo" height="40" />
           SmashNot.es
-        </a>
+        </span>
       </nav>
     );
   }
