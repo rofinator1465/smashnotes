@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+/* Nav Styles */
+.navbar {
+  background: #2F72B9;
+}
+
+/* NavDrawer Wrapper Styles */
+
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -22,7 +29,7 @@
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #222;
+  background: #377DC0;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -63,13 +70,13 @@
 .navDrawer li a {
   display: block;
   text-decoration: none;
-  color: #999999;
+  color: #f0f0f0;
 }
 
 .navDrawer li a:hover {
   text-decoration: none;
   color: #fff;
-  background: rgba(255, 255, 255, 0.2);
+  background: #2F72B9;
 }
 
 .navDrawer li a:active,
@@ -80,16 +87,16 @@
 .navDrawer > .navDrawer-brand {
   height: 65px;
   font-size: 18px;
-  line-height: 60px;
+  line-height: 65px;
 }
 
 .navDrawer > .navDrawer-brand a {
-  color: #999999;
+  color: #f0f0f0;
 }
 
 .navDrawer > .navDrawer-brand a:hover {
   color: #fff;
-  background: none;
+  background: #2F72B9;
 }
 
 @media (min-width: 768px) {

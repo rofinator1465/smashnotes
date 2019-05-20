@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import { Tags } from "./Tags";
 
 export class QuickNotes extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "",
-      disabled: true
+      quickNoteValue: "",
+      disabled: true,
+      currentTags: []
     };
 
     this.handleTextChange = this.handleTextChange.bind(this);
@@ -13,46 +15,51 @@ export class QuickNotes extends Component {
     this.setDisabled = this.setDisabled.bind(this);
   }
 
-  setTextValue(event){
-    this.setState({ value: event.target.value });
+  setTextValue(event) {
+    this.setState({ quickNoteValue: event.target.value });
   }
 
   setDisabled() {
-    if(this.state.value.trim().length !== 0){
+    if (this.state.quickNoteValue.trim().length !== 0) {
       this.setState({ disabled: false });
     } else {
       this.setState({ disabled: true });
     }
   }
 
-  handleTextChange(event){
+  handleTextChange(event) {
     this.setTextValue(event);
     this.setDisabled();
   }
-  
+
   onSave() {
-    console.log("An essay was submitted: " + this.state.value);
-    this.setState({ value: "", disabled: true});
+    // onSave Ready for output to database
+    console.log(
+      "QuickNote Value " +
+        this.state.quickNoteValue +
+        "Tags Value " +
+        this.state.currentTags
+    );
+    this.setState({ quickNoteValue: "", disabled: true });
   }
 
   render() {
     return (
-      <div class="modal-content p-3">
+      <div class="modal-content p-5">
         <form>
           <div className="form-group">
-            <label for="note-text-area" class="bmd-label-static">Add Quicknote</label>
+            <label for="note-text-area" class="bmd-label-static">
+              Add Quicknote
+            </label>
             <textarea
               id="note-text-area"
               className="form-control"
-              value={this.state.value}
+              rows="5"
+              value={this.state.quickNoteValue}
               onChange={this.handleTextChange}
             />
 
-            <div class="form-group mb-3">
-                <label for="note-tags" class="bmd-label-static">Tags</label>
-              <input type="text" id="note-tags" class="form-control" placeholder="Insert Tags Seperated By A Space" aria-label="tags" aria-describedby="text-input" />
-            </div>
-
+            <Tags currentTags={this.state.currentTags} />
 
             <input
               type="button"

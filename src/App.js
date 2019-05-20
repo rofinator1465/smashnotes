@@ -36,14 +36,14 @@ class App extends Component {
             <div id="page-content-wrapper">
               <MainNav toggleClass={this.toggleClass} />
               <section
-                class="modal fade"
+                className="modal fade"
                 id="quickNotes"
-                tabindex="-1"
+                tabIndex="-1"
                 role="dialog"
                 aria-labelledby="quickNotes"
                 aria-hidden="true"
               >
-                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-dialog modal-dialog-centered" role="document">
                   <QuickNotes />
                 </div>
               </section>

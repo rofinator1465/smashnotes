@@ -22,9 +22,7 @@ Allow for logging of tournament data as well as quick access to notes between ga
 ### Active Challenges
 
 #### QuickNotes
-Add tag pill functionality to QuickNotes.
-Connect to Firebase and accept data.
-
+Connect to Firebase and accept data. States are set and data outputs correctly.
 
 ### General Challenges
 Managing and Storing Data
@@ -74,14 +72,14 @@ View lab goals and add notes (dated)<br>
 ### Quick Notes
 Always editable quick notes<br>
 Easily searchable and accessible<br>
-Include tags for each quick note<br>
+/ Include tags for each quick note<br>
 Find quicknotes ordered by recent on each section based on tags<br>
 
 
 ### Matchups
 Character vs Character<br>
 Select keys<br>
-Keys<br>
+Keys (Examples)<br>
 - Play Grounded<br>
 - Cat and Mouse<br>
 - Play Aerial<br>
@@ -92,6 +90,7 @@ Keys<br>
 - Camp<br>
 - Trade<br>
 - Zone Break<br>
+
 Matchup Notes<br>
 Quickest Moves List<br>
 Quicked OOS List<br>

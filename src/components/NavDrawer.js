@@ -28,7 +28,13 @@ export class NavDrawer extends Component {
           </li>
 
           <br />
-          
+
+          <li>Quick Notes</li>
+
+          <li>
+            <NavLink to="/ViewQuickNotes">View All Quick Notes</NavLink>
+          </li>
+
           <li>
             <a href="" data-toggle="modal" data-target="#quickNotes">
               Add Quick Note
