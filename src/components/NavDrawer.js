@@ -8,7 +8,10 @@ export class NavDrawer extends Component {
         <ul className="navDrawer">
           <li className="navDrawer-brand">
             <NavLink exact to="/">
-              SmashNot.es
+            <img 
+            src={require("../assets/smashnotes-brand.svg")}
+            alt="Smashnotes branding"
+            width='100%' />
             </NavLink>
           </li>
           <li>
@@ -32,7 +35,7 @@ export class NavDrawer extends Component {
           <li>Quick Notes</li>
 
           <li>
-            <NavLink to="/ViewQuickNotes">View All Quick Notes</NavLink>
+            <NavLink to="/ViewQuickNotes">View Your Quick Notes</NavLink>
           </li>
 
           <li>

@@ -4,7 +4,9 @@
 
 /* Nav Styles */
 .navbar {
-  background: #2F72B9;
+  background: #377DC0;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 /* NavDrawer Wrapper Styles */
@@ -29,7 +31,7 @@
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #377DC0;
+  background: #f8f8f8;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -70,7 +72,7 @@
 .navDrawer li a {
   display: block;
   text-decoration: none;
-  color: #f0f0f0;
+  color: #377DC0;
 }
 
 .navDrawer li a:hover {
@@ -85,9 +87,8 @@
 }
 
 .navDrawer > .navDrawer-brand {
-  height: 65px;
+  margin-left: -22px;
   font-size: 18px;
-  line-height: 65px;
 }
 
 .navDrawer > .navDrawer-brand a {
@@ -96,7 +97,7 @@
 
 .navDrawer > .navDrawer-brand a:hover {
   color: #fff;
-  background: #2F72B9;
+  background: #377DC0;
 }
 
 @media (min-width: 768px) {

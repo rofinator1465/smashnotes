@@ -17,16 +17,17 @@
   align-items: right;
 }
 
-.tag-text {
+/*.tag-text {
 }
+*/
 
 .tag-remove-image {
-  background-image: url("../baseline-remove_circle_outline-24px.svg");
+  background-image: url("../assets/baseline-remove_circle_outline-24px.svg");
   background-size: 100%;
   height: 1rem;
   width: 1rem;
 }
 
 .tag-remove-image:hover {
-  background-image: url("../baseline-remove_circle-24px.svg");
+  background-image: url("../assets/baseline-remove_circle-24px.svg");
 }
