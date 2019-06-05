@@ -32,21 +32,22 @@ export class QuickNotes extends Component {
     this.setDisabled();
   }
 
-  onSave() {
+  onSave(event) {
     // onSave Ready for output to database
+    event.preventDefault();
     console.log(
       "QuickNote Value " +
         this.state.quickNoteValue +
         "Tags Value " +
         this.state.currentTags
     );
-    this.setState({ quickNoteValue: "", disabled: true });
+    this.setState({ quickNoteValue: "", currentTags: [], disabled: true });
   }
 
   render() {
     return (
       <div class="modal-content p-5">
-        <form>
+        <form onSubmit={this.onSave}>
           <div className="form-group">
             <label for="note-text-area" class="bmd-label-static">
               Add Quicknote

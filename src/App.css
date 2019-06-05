@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web:400,600&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Nav Styles */
 .navbar {
-  background: #377DC0;
-  font-family: sans-serif;
-  font-weight: bold;
+  background: rgb(49, 114, 175);
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
 }
 
 /* NavDrawer Wrapper Styles */
@@ -31,7 +34,7 @@
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #f8f8f8;
+  background: #fff;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -72,13 +75,14 @@
 .navDrawer li a {
   display: block;
   text-decoration: none;
-  color: #377DC0;
+  color: rgb(50, 120, 185);
+  transition: 0.3s;
 }
 
 .navDrawer li a:hover {
   text-decoration: none;
   color: #fff;
-  background: #2F72B9;
+  background: rgb(50, 120, 185);
 }
 
 .navDrawer li a:active,
@@ -87,17 +91,27 @@
 }
 
 .navDrawer > .navDrawer-brand {
+  color: rgb(50, 120, 185);
   margin-left: -22px;
   font-size: 18px;
+  transition: ease-in 0.9s;
+}
+
+.navDrawer > .navDrawer-subtitle {
+  margin-left: -10px;
+  color: rgb(50, 120, 185);
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 
 .navDrawer > .navDrawer-brand a {
-  color: #f0f0f0;
+  color: rgb(50, 120, 185);
 }
 
 .navDrawer > .navDrawer-brand a:hover {
   color: #fff;
-  background: #377DC0;
+  background: rgb(50, 120, 185);
 }
 
 @media (min-width: 768px) {

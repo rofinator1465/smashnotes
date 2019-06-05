@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.110909"
-     inkscape:cx="465.38466"
-     inkscape:cy="101.83161"
+     inkscape:cx="457.0201"
+     inkscape:cy="173.84471"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -59,15 +59,17 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0.02852236,-195.58386)">
-    <path
-       style="fill:#377dc0;fill-opacity:1;stroke:#377dc0;stroke-width:0.44733188px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 0.19492943,204.85338 246.01408,195.8159 v 44.38444 l -117.23554,4.31013 -128.58361057,4.72734 z"
-       id="path4710"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccscc" />
+    <rect
+       style="fill:#3278b9;fill-opacity:1;stroke:#3278b9;stroke-width:0.26458377;stroke-opacity:1"
+       id="rect830"
+       width="246.50464"
+       height="54.064301"
+       x="-14.011787"
+       y="202.69913"
+       transform="rotate(-3.4804149)" />
     <g
        id="g4643"
-       transform="matrix(0.32012709,0,0,0.32012709,-1.8388963,191.60814)"
+       transform="matrix(0.32012709,0,0,0.32012709,-1.3625589,189.70279)"
        style="stroke:#ffffff;stroke-opacity:1">
       <path
          inkscape:connector-curvature="0"
@@ -104,13 +106,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15.63555431px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39088884"
-       x="45.763306"
-       y="231.52843"
+       x="40.523594"
+       y="233.43378"
        id="text4714"><tspan
          sodipodi:role="line"
          id="tspan4712"
-         x="45.763306"
-         y="231.52843"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.01688576px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.39088884">SmashNot.es</tspan></text>
+         x="40.523594"
+         y="233.43378"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:31.75005333px;font-family:'Titillium Web', sans-serif;-inkscape-font-specification:'Titillium Web Semi-Bold';fill:#ffffff;stroke-width:0.39088884">SmashNot.es</tspan></text>
   </g>
 </svg>

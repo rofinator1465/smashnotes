@@ -15,15 +15,17 @@ export class Tags extends Component {
   }
 
   addTag(value) {
-    let newTags = this.state.currentTags;
-    newTags.push(value);
-    this.setState({ currentTags: newTags });
+    let tags = this.state.currentTags;
+    if(!tags.includes(value)){
+    tags.push(value);
+    this.setState({ currentTags: tags });
+    }
   }
 
   removeTag(index) {
-    let newTags = this.state.currentTags;
-    newTags.splice(index, 1);
-    this.setState({ currentTags: newTags });
+    let tags = this.state.currentTags;
+    tags.splice(index, 1);
+    this.setState({ currentTags: tags });
   }
 
   renderTag() {
@@ -44,6 +46,9 @@ export class Tags extends Component {
       this.setState({ tagValue: event.target.value });
       this.addTag(this.state.tagValue);
       event.target.value = "";
+    } else if (event.key === "Enter") {
+      event.preventDefault();
+      this.setState({ currentTags: [] });
     } else {
       this.setState({ tagValue: event.target.value });
     }

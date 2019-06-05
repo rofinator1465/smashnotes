@@ -21,6 +21,9 @@ Allow for logging of tournament data as well as quick access to notes between ga
 
 ### Active Challenges
 
+#### Bugs/Fixes Required
+QuickNotes modal doesn't reset fields with SAVE AND CLOSE only on enter press in tags field
+
 #### QuickNotes
 Connect to Firebase and accept data. States are set and data outputs correctly.
 
@@ -29,7 +32,7 @@ Managing and Storing Data
 
 Best way to include outside API such as kurogane hammer API for site speed
 
-How to create effective offline mode
+How to create effective offline mode - Service Workers - Progressive Web App (PWA)
 
 Keep Website Light and Quick
 
@@ -71,8 +74,9 @@ View lab goals and add notes (dated)<br>
 
 ### Quick Notes
 Always editable quick notes<br>
+Date shown for each note<br>
 Easily searchable and accessible<br>
-/ Include tags for each quick note<br>
+<s>Include tags for each quick note</s><br>
 Find quicknotes ordered by recent on each section based on tags<br>
 
 
