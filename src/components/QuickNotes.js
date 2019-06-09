@@ -12,7 +12,9 @@ export class QuickNotes extends Component {
 
     this.handleTextChange = this.handleTextChange.bind(this);
     this.onSave = this.onSave.bind(this);
+    this.preventDefault = this.preventDefault.bind(this);
     this.setDisabled = this.setDisabled.bind(this);
+    this.clearNote = this.clearNote.bind(this);
   }
 
   setTextValue(event) {
@@ -32,22 +34,31 @@ export class QuickNotes extends Component {
     this.setDisabled();
   }
 
+  preventDefault(event) {
+    event.preventDefault();
+  }
+
+  clearNote() {
+    this.setState({ quickNoteValue: "", currentTags: [], disabled: true });
+  }
+
   onSave(event) {
     // onSave Ready for output to database
     event.preventDefault();
+    
     console.log(
       "QuickNote Value " +
         this.state.quickNoteValue +
         "Tags Value " +
         this.state.currentTags
     );
-    this.setState({ quickNoteValue: "", currentTags: [], disabled: true });
+    this.clearNote();
   }
 
   render() {
     return (
       <div class="modal-content p-5">
-        <form onSubmit={this.onSave}>
+        <form onSubmit={this.preventDefault}>
           <div className="form-group">
             <label for="note-text-area" class="bmd-label-static">
               Add Quicknote
@@ -70,13 +81,20 @@ export class QuickNotes extends Component {
               value="Save/Close"
               disabled={this.state.disabled}
             />
+            
+            <input
+              type="button"
+              className="btn btn-secondary"
+              onClick={this.clearNote}
+              value="Clear Note"
+            />
 
             <input
               type="button"
               className="btn btn-secondary"
               data-dismiss="modal"
               onClick={this.setDisabled}
-              value="Close"
+              value="Hide"
             />
           </div>
         </form>

@@ -22,7 +22,7 @@ Allow for logging of tournament data as well as quick access to notes between ga
 ### Active Challenges
 
 #### Bugs/Fixes Required
-QuickNotes modal doesn't reset fields with SAVE AND CLOSE only on enter press in tags field
+
 
 #### QuickNotes
 Connect to Firebase and accept data. States are set and data outputs correctly.

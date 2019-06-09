@@ -68,7 +68,6 @@
 }
 
 .navDrawer li {
-  text-indent: 20px;
   line-height: 40px;
 }
 
@@ -92,7 +91,6 @@
 
 .navDrawer > .navDrawer-brand {
   color: rgb(50, 120, 185);
-  margin-left: -22px;
   font-size: 18px;
   transition: ease-in 0.9s;
 }

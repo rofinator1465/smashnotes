@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import "./App.css";
 import { NavDrawer } from "./components/NavDrawer";
 import { MainNav } from "./components/MainNav";
 import {
   BrowserRouter,
   Route
 } from "react-router-dom/cjs/react-router-dom.min";
+
+//Components and Styles
+import "./App.css";
 import { Recent } from "./components/Recent";
 import { Practice } from "./components/Practice";
 import { Lab } from "./components/Lab";

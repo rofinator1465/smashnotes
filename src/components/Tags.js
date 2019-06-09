@@ -5,7 +5,6 @@ export class Tags extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentTags: this.props.currentTags, //Be sure to set state of currentTags in Parent Element
       tagValue: ""
     };
 
@@ -15,7 +14,7 @@ export class Tags extends Component {
   }
 
   addTag(value) {
-    let tags = this.state.currentTags;
+    let tags = this.props.currentTags;
     if(!tags.includes(value)){
     tags.push(value);
     this.setState({ currentTags: tags });
@@ -23,13 +22,13 @@ export class Tags extends Component {
   }
 
   removeTag(index) {
-    let tags = this.state.currentTags;
+    let tags = this.props.currentTags;
     tags.splice(index, 1);
     this.setState({ currentTags: tags });
   }
 
   renderTag() {
-    let newTags = this.state.currentTags;
+    let newTags = this.props.currentTags;
     return newTags.map((value, index) => (
       <button className="tag btn btn-raised btn-success p-1 m-1" type="button">
         <div
@@ -42,13 +41,11 @@ export class Tags extends Component {
   }
 
   handleTagType(event) {
-    if (event.key === " ") {
+    if (event.key === " " || event.key === "Enter") {
+      event.preventDefault();
       this.setState({ tagValue: event.target.value });
       this.addTag(this.state.tagValue);
       event.target.value = "";
-    } else if (event.key === "Enter") {
-      event.preventDefault();
-      this.setState({ currentTags: [] });
     } else {
       this.setState({ tagValue: event.target.value });
     }
