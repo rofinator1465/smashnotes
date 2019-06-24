@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Tags } from "./Tags";
 
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+
 export class QuickNotes extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +16,7 @@ export class QuickNotes extends Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.onSave = this.onSave.bind(this);
     this.preventDefault = this.preventDefault.bind(this);
-    this.setDisabled = this.setDisabled.bind(this);
+    this.toggleDisabled = this.toggleDisabled.bind(this);
     this.clearNote = this.clearNote.bind(this);
   }
 
@@ -21,7 +24,7 @@ export class QuickNotes extends Component {
     this.setState({ quickNoteValue: event.target.value });
   }
 
-  setDisabled() {
+  toggleDisabled() {
     if (this.state.quickNoteValue.trim().length !== 0) {
       this.setState({ disabled: false });
     } else {
@@ -31,7 +34,7 @@ export class QuickNotes extends Component {
 
   handleTextChange(event) {
     this.setTextValue(event);
-    this.setDisabled();
+    this.toggleDisabled();
   }
 
   preventDefault(event) {
@@ -45,7 +48,7 @@ export class QuickNotes extends Component {
   onSave(event) {
     // onSave Ready for output to database
     event.preventDefault();
-    
+
     console.log(
       "QuickNote Value " +
         this.state.quickNoteValue +
@@ -57,15 +60,14 @@ export class QuickNotes extends Component {
 
   render() {
     return (
-      <div class="modal-content p-5">
+      <div>
         <form onSubmit={this.preventDefault}>
-          <div className="form-group">
-            <label for="note-text-area" class="bmd-label-static">
-              Add Quicknote
-            </label>
-            <textarea
+          <div>
+            <TextField
               id="note-text-area"
-              className="form-control"
+              label="Add QuickNote"
+              variant="outlined"
+              multiline
               rows="5"
               value={this.state.quickNoteValue}
               onChange={this.handleTextChange}
@@ -73,29 +75,33 @@ export class QuickNotes extends Component {
 
             <Tags currentTags={this.state.currentTags} />
 
-            <input
-              type="button"
-              className="btn btn-primary"
-              onClick={this.onSave}
-              data-dismiss="modal"
+            <Button
+              variant="outlined"
+              onClick={this.clearNote}
+              value="Reset Note"
+            >
+              Reset Note
+            </Button>
+
+            <Button
+              variant="outlined"
+              onClick={event => {
+                this.onSave(event);
+                this.props.handleModalClose();
+              }}
               value="Save/Close"
               disabled={this.state.disabled}
-            />
-            
-            <input
-              type="button"
-              className="btn btn-secondary"
-              onClick={this.clearNote}
-              value="Clear Note"
-            />
+            >
+              Save/Close
+            </Button>
 
-            <input
-              type="button"
-              className="btn btn-secondary"
-              data-dismiss="modal"
-              onClick={this.setDisabled}
-              value="Hide"
-            />
+            <Button
+              variant="outlined"
+              onClick={this.props.handleModalClose}
+              value="Close"
+            >
+              Close
+            </Button>
           </div>
         </form>
       </div>

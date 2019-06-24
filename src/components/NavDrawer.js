@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import Button from '@material-ui/core/Button';
 
 export class NavDrawer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
       <nav id="navDrawer-wrapper">
@@ -40,9 +46,9 @@ export class NavDrawer extends Component {
           </li>
 
           <li>
-            <a href="" data-toggle="modal" data-target="#quickNotes">
+            <Button variant="outlined" onClick={this.props.handleModalOpen}>
               Add Quick Note
-            </a>
+            </Button>
           </li>
         </ul>
       </nav>

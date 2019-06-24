@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web:400,600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web:400,600&display=swap");
 
 .App {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Nav Styles */
 .navbar {
   background: rgb(49, 114, 175);
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 600;
 }
 
@@ -98,7 +98,7 @@
 .navDrawer > .navDrawer-subtitle {
   margin-left: -10px;
   color: rgb(50, 120, 185);
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
 }
@@ -138,4 +138,13 @@
     position: relative;
     margin-right: 0;
   }
+}
+
+.modal {
+  position: absolute;
+  width: 400px;
+  padding: 32px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
