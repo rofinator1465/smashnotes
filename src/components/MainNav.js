@@ -1,3 +1,4 @@
+// Replaced by MainDrawer
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
@@ -33,7 +34,7 @@ export class MainNav extends Component {
           <IconButton
             aria-controls="NavDrawer"
             aria-haspopup="true"
-            onClick={this.props.toggleClass}
+            onClick={this.props.handleModalOpen}
           >
             <MenuIcon />
           </IconButton>

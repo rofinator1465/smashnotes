@@ -1,16 +1,19 @@
+// Replaced by MainDrawer
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import Button from '@material-ui/core/Button';
+import Drawer from '@material-ui/core/Drawer';
 
 export class NavDrawer extends Component {
   constructor(props){
     super(props);
-    this.state = {};
+    this.state = {
+    };
   }
-
+  
   render() {
     return (
-      <nav id="navDrawer-wrapper">
+      <Drawer id="navDrawer-wrapper" open={this.props.drawerOpen}>
         <ul className="navDrawer">
           <li className="navDrawer-brand">
             <NavLink exact to="/">
@@ -34,7 +37,7 @@ export class NavDrawer extends Component {
           </li>
 
           <li>
-            <NavLink to="/Tourney">Tourney Mode</NavLink>
+            <NavLink to="/Tourney">Tourney MoAddde</NavLink>
           </li>
 
           <br />
@@ -51,7 +54,7 @@ export class NavDrawer extends Component {
             </Button>
           </li>
         </ul>
-      </nav>
+      </Drawer>
     );
   }
 }
