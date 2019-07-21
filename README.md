@@ -20,9 +20,11 @@ Allow for logging of tournament data as well as quick access to notes between ga
 ### Challenges
 
 ### Active Challenges
-Refactor to all function components, learn more about hooks
-
 Add login capabilities
+
+Add login vs no login pages
+
+Add Database connection
 
 #### Bugs/Fixes Required
 

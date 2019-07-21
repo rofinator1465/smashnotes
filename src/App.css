@@ -5,11 +5,14 @@
   font-family: "Open Sans", sans-serif;
 }
 
-/* Nav Styles */
-.navbar {
-  background: rgb(49, 114, 175);
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 600;
+.navLink {
+  text-decoration: none;
+  color: rgba(0, 0, 0, .75);
+}
+
+.navLink-active {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
 }
 
 .modal {

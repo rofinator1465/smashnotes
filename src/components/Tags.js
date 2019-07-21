@@ -1,40 +1,35 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Tags.css";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
-export class Tags extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tagValue: ""
-    };
+export function Tags({currentTags, setCurrentTags}) {
+  const [tagValue, setTagValue] = React.useState("");
+  const [forceUpdate, setForceUpdate] = React.useState(true);
 
-    this.handleTagType = this.handleTagType.bind(this);
-    this.removeTag = this.removeTag.bind(this);
-    this.renderTag = this.renderTag.bind(this);
-  }
-
-  addTag(value) {
-    let tags = this.props.currentTags;
-    if (!tags.includes(value)) {
-      tags.push(value);
-      this.setState({ currentTags: tags });
+  const addTag = (value) => {
+    let valueLower = value.toLowerCase();
+    let tags = currentTags;
+    if (!tags.includes(valueLower)) {
+      tags.push(valueLower);
+      setCurrentTags(tags);
+      setForceUpdate(!forceUpdate);
     }
   }
 
-  removeTag(index) {
-    let tags = this.props.currentTags;
+  const removeTag = (index) => {
+    let tags = currentTags;
     tags.splice(index, 1);
-    this.setState({ currentTags: tags });
+    setCurrentTags(tags);
+    setForceUpdate(!forceUpdate);
   }
 
-  renderTag() {
-    let newTags = this.props.currentTags;
+  const renderTag = () => {
+    let newTags = currentTags;
     return newTags.map((value, index) => (
-      <Button color="warning" className="tag">
-        <i onClick={() => this.removeTag(index)} className="material-icons">
+      <Button variant="contained" color="secondary" className="tag">
+        <i onClick={() => removeTag(index)} className="material-icons">
           cancel
         </i>
         <div className="tag-text mx-1">{value}</div>
@@ -42,31 +37,28 @@ export class Tags extends Component {
     ));
   }
 
-  handleTagType(event) {
+  const handleTagType = (event) => {
     if (event.key === " " || event.key === "Enter") {
       event.preventDefault();
-      this.setState({ tagValue: event.target.value });
-      this.addTag(this.state.tagValue);
+      addTag(tagValue);
       event.target.value = "";
     } else {
-      this.setState({ tagValue: event.target.value });
+      setTagValue(event.target.value);
     }
   }
 
-  render() {
-    return (
-      <div className="form-group mb-3">
-        <TextField
-          type="text"
-          variant="outlined"
-          label="Add Tag"
-          className="tagBar form-control"
-          onKeyUp={this.handleTagType}
-          aria-label="noteTags"
-          aria-describedby="text-input"
-        />
-        <Container className="tag-group">{this.renderTag()}</Container>
-      </div>
-    );
-  }
+  return (
+    <div className="form-group mb-3">
+      <TextField
+        type="text"
+        variant="outlined"
+        label="Add Tag"
+        className="tagBar form-control"
+        onKeyUp={handleTagType}
+        aria-label="noteTags"
+        aria-describedby="text-input"
+      />
+      <Container className="tag-group">{renderTag()}</Container>
+    </div>
+  );
 }

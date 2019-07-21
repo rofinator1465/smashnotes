@@ -1,110 +1,99 @@
-import React, { Component } from "react";
+import React from "react";
 import { Tags } from "./Tags";
 
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
-export class QuickNotes extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      quickNoteValue: "",
-      disabled: true,
-      currentTags: []
-    };
+export function QuickNotes({handleModalClose}) {
+  const [quickNoteValue, setQuickNoteValue] = React.useState("");
+  const [disabled, setDisabled] = React.useState(true);
+  const [currentTags, setCurrentTags] = React.useState([]);
 
-    this.handleTextChange = this.handleTextChange.bind(this);
-    this.onSave = this.onSave.bind(this);
-    this.preventDefault = this.preventDefault.bind(this);
-    this.toggleDisabled = this.toggleDisabled.bind(this);
-    this.clearNote = this.clearNote.bind(this);
+  const setTextValue = (event) => {
+    setQuickNoteValue(event.target.value);
   }
 
-  setTextValue(event) {
-    this.setState({ quickNoteValue: event.target.value });
-  }
-
-  toggleDisabled() {
-    if (this.state.quickNoteValue.trim().length !== 0) {
-      this.setState({ disabled: false });
+  const toggleDisabled = () => {
+    if (quickNoteValue.trim().length !== 0) {
+      setDisabled(false);
     } else {
-      this.setState({ disabled: true });
+      setDisabled(true);
     }
   }
 
-  handleTextChange(event) {
-    this.setTextValue(event);
-    this.toggleDisabled();
+  const handleTextChange = (event) => {
+    setTextValue(event);
+    toggleDisabled();
   }
 
-  preventDefault(event) {
+  const preventDefault = (event) => {
     event.preventDefault();
   }
 
-  clearNote() {
-    this.setState({ quickNoteValue: "", currentTags: [], disabled: true });
+  const clearNote = () => {
+    setQuickNoteValue("");
+    setCurrentTags([]);
+    setDisabled(true);
   }
 
-  onSave(event) {
+  const onSave = (event) => {
     // onSave Ready for output to database
     event.preventDefault();
 
     console.log(
       "QuickNote Value " +
-        this.state.quickNoteValue +
+        quickNoteValue +
         "Tags Value " +
-        this.state.currentTags
+        currentTags
     );
-    this.clearNote();
+    clearNote();
   }
 
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.preventDefault}>
-          <div>
-            <TextField
-              id="note-text-area"
-              label="Add QuickNote"
-              variant="outlined"
-              multiline
-              rows="5"
-              value={this.state.quickNoteValue}
-              onChange={this.handleTextChange}
-            />
+  return (
+    <div>
+      <form onSubmit={preventDefault}>
+        <div>
+          <TextField
+            id="note-text-area"
+            label="Add QuickNote"
+            variant="outlined"
+            multiline
+            rows="5"
+            value={quickNoteValue}
+            onChange={handleTextChange}
+          />
 
-            <Tags currentTags={this.state.currentTags} />
+          <Tags currentTags={currentTags} setCurrentTags={setCurrentTags} />
 
-            <Button
-              variant="outlined"
-              onClick={this.clearNote}
-              value="Reset Note"
-            >
-              Reset Note
-            </Button>
+          <Button
+            variant="outlined"
+            onClick={clearNote}
+            value="Reset Note"
+          >
+            Reset Note
+          </Button>
 
-            <Button
-              variant="outlined"
-              onClick={event => {
-                this.onSave(event);
-                this.props.handleModalClose();
-              }}
-              value="Save/Close"
-              disabled={this.state.disabled}
-            >
-              Save/Close
-            </Button>
+          <Button
+            variant="outlined"
+            onClick={event => {
+              onSave(event);
+              handleModalClose();
+            }}
+            value="Save/Close"
+            disabled={disabled}
+          >
+            Save/Close
+          </Button>
 
-            <Button
-              variant="outlined"
-              onClick={this.props.handleModalClose}
-              value="Close"
-            >
-              Close
-            </Button>
-          </div>
-        </form>
-      </div>
-    );
-  }
+          <Button
+            variant="outlined"
+            onClick={handleModalClose}
+            value="Close"
+          >
+            Close
+          </Button>
+        </div>
+      </form>
+    </div>
+  );
 }

@@ -21,6 +21,7 @@ import { Tourney } from "./components/Tourney";
 import Container from "@material-ui/core/Container";
 import Modal from "@material-ui/core/Modal";
 import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
@@ -90,6 +91,9 @@ const useStyles = makeStyles(theme => ({
 function App() {
   const classes = useStyles();
   const theme = useTheme();
+  const userContext = React.createContext({
+    user: null
+  });
   const [modalOpen, setModalOpen] = React.useState(false);
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
@@ -121,11 +125,12 @@ function App() {
             theme={theme}
             drawerOpen={drawerOpen}
             handleDrawerClose={handleDrawerClose}
+            handleModalOpen={handleModalOpen}
           />
 
           <main className={classes.content}>
             <div className={classes.toolbar} />
-            <Modal modalOpen={modalOpen} onClose={handleModalClose}>
+            <Modal open={modalOpen} onClose={handleModalClose}>
               <Paper className="modal">
                 <QuickNotes handleModalClose={handleModalClose} />
               </Paper>
@@ -133,8 +138,8 @@ function App() {
             <Container>
               <Route exact path="/" component={Recent} />
               <Route path="/Practice" component={Practice} />
-              <Route path="/Lab" component={Lab} />
               <Route path="/Matchups" component={Matchups} />
+              <Route path="/Lab" component={Lab} />
               <Route path="/Tourney" component={Tourney} />
             </Container>
           </main>
